@@ -30,3 +30,44 @@ This adds a listing to the user's Ebay profile. The proper paramters are require
 ### deleteEbayListing:
 
 This method deletes a listing.
+
+
+## Usage Instructions:
+
+Fill in the appropriate parameters (Algolia App Id, Algolia Index Id) for Algolia search in the client variable below.
+
+```
+var client = algoliasearch('', '');
+```
+
+Do the same as above for the ebayClient variable.
+
+```
+var ebayClient = algoliasearch('', '');
+```
+
+Retrieve the DevId, CertId, and AppId from your Ebay developer dashboard and set the variables below to those values.
+
+![Alt text](pics/pic2.png?raw=true "Title")
+
+```
+var devId = '';
+var certId = '';
+var appId = '';
+```
+
+This productionToken is the UserAuthToken required to make any of the Ebay API calls. The token must be from a Production environment, not a Sandbox. Fill in the variable "productionToken" with the value from the dashboard.
+
+![Alt text](pics/pic1.png?raw=true "Title")
+
+```
+var productionToken = "";
+```
+
+Once these variables' values are populated, calls like the ones listed below can be made:
+
+```
+ebayRequest("GetItem", devId, certId, appId, authToken, {"ItemID": '372471566880'});
+
+getEbayListings(devId, certId, appId, authToken, endTimeFrom, endTimeTo, fn, userId)
+```
