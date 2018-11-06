@@ -152,14 +152,14 @@ function getUserAuthToken(devId, certId, appId, fn) {
 
    https://developer.ebay.com/devzone/xml/docs/Reference/eBay/AddItem.html
 */
-function addEbayListing() {
+function addEbayListing(devId, certId, appId, authToken, params) {
     ebayRequest("AddItem", devId, certId, appId, authToken, params);
 }
 
 /*
   Method to delete an Ebay listing.
  */
-function deleteEbayListing() {
+function deleteEbayListing(devId, certId, appId, authToken, params) {
     ebayRequest("EndItem", devId, certId, appId, authToken, params);
 }
 
