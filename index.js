@@ -57,8 +57,14 @@ function ebayRequest(methodName, devId, certId, appId, authToken, params, fn) {
 
 }
 
-
-// return the listings from specific seller on ebay
+/* return the listings from specific seller on ebay
+ 
+   For pagination, "Pagination": {"EntriesPerPage": "200", "PageNumber": "1"} dict
+   can be added to the params. Multiple calls are needed with increasing page
+   numbers to retrieve all listings, if there are more than the set EntriesPerPage.
+   
+   EntriesPerPage maximum may be 200.
+*/
 function getEbayListings(devId, certId, appId, authToken, endTimeFrom, endTimeTo, fn, userId) {
 
     params = {};
@@ -76,9 +82,23 @@ function getEbayListings(devId, certId, appId, authToken, endTimeFrom, endTimeTo
 	};
     }
 
-    ebayRequest("GetSellerList", devId, certId, appId, authToken, params);
+    ebayRequest("GetSellerList", devId, certId, appId, authToken, params, fn);
 }
 
+function getItemDetails(devId, certId, appId, authToken, itemId, fn) {
+    ebayRequest("GetItem", devId, certId, appId, authToken, {"ItemID": itemId}, fn);
+}
+
+
+/* This function can only be called with the Seller's Ebay Account Auth Token.
+   The seller must create a developer account so Kicktronics can retrieve a
+   userAuthToken from them. 
+
+   This function gets the active selling list of the seller. */
+function getMyEbaySellingList(devId, certId, appId, authToken, fn) {
+    ebayRequest("GetMyeBaySelling", devId, certId, appId, authToken,
+		{"ActiveList": "True"}, fn);
+}
 
 function getAlgoliaListings(index, indexName, fn) {
     index.getObject('', function(err, content) {

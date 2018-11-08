@@ -17,7 +17,7 @@ var startTime = '2018-10-01';
 var endTime = '2018-10-27';
 var authToken = 'AgAAAA**AQAAAA**aAAAAA**AADVWw**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4ajD5GFoASdj6x9nY+seQ**fr8EAA**AAMAAA**W/Ryr/rI/mVZdy3wFeNM5xvS0w68smGsLjLSoc7RXc2fMTW4hmAOL7h5sEEA8vgrt1qPya8SqeyWcCq+ajZzkWcOi29CjfMB1eaK+c/Agx2DcO5XgnwWjiwUMOwwbRWq/5BQBcckAN9zITYXPQw6porjla7CVVIzKNXb6efFePFh6cKkR+krktv0eDSmyLKGmc3YRq3xauE9Jsg/SPPF7KyMGLezMj/baWrmZJIkWB3rSVmqCsp/9WYA2CFJUQOABtjU45j5WwA1AYgP7XXy70rbd/rf6SSDpMitkf0RRpGKgPBIZh8itL7yAz8hY1jLmKEqB72B3L9cu9V1hLDQpTHZrZYCMJe0e8tEeLtQjS7p9jOTLEqgcD4HXlO8dv6E9FUGeTwUk/iV+9jP+IJ72Gf515JBoPrut5kEKo8vPyU0F2azkhCUsHQ693rxPwBW1fQdu5g76ocwSwwPMP0z49gxa75umXd5EBiz4WSzdn4KY0ZvZaqWziuROGfsOQ1hNVSc4Im8fV0towW+AUT+Zb0pq5dDBXWs8662GDeWL0P49kRbfi7rL4At7w9Yi0r4JY11ItS91qZjFEXTZVaIj0+Ta0zanP7FqQhmsUw31gUnleTV7Ax9weyITi9Behzc4DJpOOUQ3/OGj5zP3TjXGlXURkCUYxCpjn0DqpiGcq3UjM0iW68fAVsPqnhn4HkNvGHh7o4lKy1kvmibR7vTU+RnVgx1dES4daUPgG2WjyLAbooSu/j53pytlPGCpPv3';
 
-var authTokenTwo = "AgAAAA**AQAAAA**aAAAAA**SWXbWw**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6AMlYekAJGCoQydj6x9nY+seQ**wBUFAA**AAMAAA**1c2AmAodl5YvJNwu1Y6GhBjkNpBxzceZ7A0uVZA5YCnnf2bMkFT90SFbNuCW95oncSRHehKEd06E2T2/yEyIur80k1VzHT+g/aUDZUDrgqk8XgtAHolz8k8omZwzLNkhP+T+iieEoWXjS33H5iC1M9vUL6FlbpvgZ6BkCQ7yxCBkyZboDgORORhqtsGKJO3ccCt2df0DPb5ZxrLWiwNv9E+YDt8dny77hDClHHvdY4fbrPdjpKZ6hL0AWzQt2zmwfv2Wd/QQ0v3BuZqujILcWF43KBocTIRO13C2eGo8UipRttep9m9nUC0eMUMwkX0E77ybuBCvAFHZQw2AkNDtndxPWXVZX9i//mmaXR4DLO7tVjgxdN1CydFtcIVRizbV0dV1UAHJkwJ1ZfCXzpsjZ7DjQVhYFBrl5buG0IsQ+Yjy1o3mMLR0cN4MQH5mMA8AdUodex0bFE6Gn5QgsZeLeAuSquXEd90LRUwcp1Zze2QS+w2XcfA+8ZHW4iv5GFjI78dCkXVwWcNh07AIXb/P2XHsgzIHxSX1F3pw6VhJ34uiI9+IjZpN2TPKHZiPyRbdl7P93pjluDptO6iy5eqG34uqOadMC0nNS0rr1VEctWwRog+8d3S7iGHyKiqYtfAWHojPcKbrqC/EZaUm6zOtZL0+AnYeLWFMzF/DT98Lhn2ybJUyiQHdlqlqn/rRQz+b0JDQCB7tj0GHhb3yzT6GLZ99sVaBQCVlmB+ymfCQW6wrgLL73ediTtT3ph/Nwacc";
+var authTokenTwo = "AgAAAA**AQAAAA**aAAAAA**a6HkWw**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6AMlYekAJGCoQydj6x9nY+seQ**wBUFAA**AAMAAA**1c2AmAodl5YvJNwu1Y6GhBjkNpBxzceZ7A0uVZA5YCnnf2bMkFT90SFbNuCW95oncSRHehKEd06E2T2/yEyIur80k1VzHT+g/aUDZUDrgqk8XgtAHolz8k8omZwzLNkhP+T+iieEoWXjS33H5iC1M9vUL6FlbpvgZ6BkCQ7yxCBkyZboDgORORhqtsGKJO3ccCt2df0DPb5ZxrLWiwNv9E+YDt8dny77hDClHHvdY4fbrPdjpKZ6hL0AWzQt2zmwfv2Wd/QQ0v3BuZqujILcWF43KBocTIRO13C2eGo8UipRttep9m9nUC0eMUMwkX0E77ybuBCvAFHZQw2AkNDtndxPWXVZX9i//mmaXR4DLO7tVjgxdN1CydFtcIVRizbV0dV1UAHJkwJ1ZfCXzpsjZ7DjQVhYFBrl5buG0IsQ+Yjy1o3mMLR0cN4MQH5mMA8AdUodex0bFE6Gn5QgsZeLeAuSquXEd90LRUwcp1Zze2QS+w2XcfA+8ZHW4iv5GFjI78dCkXVwWcNh07AIXb/P2XHsgzIHxSX1F3pw6VhJ34uiI9+IjZpN2TPKHZiPyRbdl7P93pjluDptO6iy5eqG34uqOadMC0nNS0rr1VEctWwRog+8d3S7iGHyKiqYtfAWHojPcKbrqC/EZaUm6zOtZL0+AnYeLWFMzF/DT98Lhn2ybJUyiQHdlqlqn/rRQz+b0JDQCB7tj0GHhb3yzT6GLZ99sVaBQCVlmB+ymfCQW6wrgLL73ediTtT3ph/Nwacc";
 
 
 var devIdTwo =  'cada3e87-9a8a-4760-9457-3aa574221bd3';
@@ -122,8 +122,9 @@ function ebayRequest(methodName, devId, certId, appId, authToken, params, fn) {
 	    console.log(methodName);
 	    console.log(results);
 
-	    if (fn) fn(results);
+	    console.log(typeof fn);
 
+	    if (fn) fn(results);
 	    console.log("\n\n\n");
 	});
 
@@ -151,6 +152,10 @@ function getEbayListings(devId, certId, appId, authToken, endTimeFrom, endTimeTo
     }
 
     ebayRequest("GetSellerList", devId, certId, appId, authToken, params);
+}
+
+function getItemDetails(devId, certId, appId, authToken, itemId, fn) {
+    ebayRequest("GetItem", devId, certId, appId, authToken, {"ItemID": itemId}, fn);  
 }
 
 
@@ -244,9 +249,13 @@ ebay.xmlRequest({
 //getAlgoliaListings(index, "index", function(results){}); 
 
 ebayRequest("GetSellerList", devIdTwo, certIdTwo, appIdTwo, authTokenTwo,
-	    {"EndTimeFrom": startTime, "EndTimeTo": endTime, "UserID": "btalin2012"});
+	    {"EndTimeFrom": startTime, "EndTimeTo": endTime, "UserID": "btalin2012", 
+		    "Pagination": {"EntriesPerPage": "200", "PageNumber": "1"}});
+//ebayRequest("GetMyeBaySelling", devIdTwo, certIdTwo, appIdTwo, authTokenTwo,
+//            {"ActiveList": "True", "UserID": "btalin2012"});
 //ebayRequest("GetUser", devId, certId, appId, authToken, params);
-ebayRequest("GetItem", devIdTwo, certIdTwo, appIdTwo, authTokenTwo, {"ItemID": '372471566880'});
+//ebayRequest("GetItem", devIdTwo, certIdTwo, appIdTwo, authTokenTwo, {"ItemID": '302686445549'});
+//getItemDetails(devIdTwo, certIdTwo, appIdTwo, authTokenTwo, '302686445549');
 
 // some angular component has to be made? why? I don't recall 
 
